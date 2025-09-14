@@ -1,9 +1,9 @@
-id: cors-misconfig
+id: cors-misconfiguration
 info:
   name: CORS Misconfiguration
-  author: coffin
-  severity: high
-  tags: cors,generic,misconfig
+  author: the_shadow_0
+  severity: medium
+  tags: cors,misconfig
 
 http:
   - raw:
@@ -14,7 +14,7 @@ http:
 
     payloads:
       cors_origin:
-        - "https://{{tolower(rand_base(5))}}.{{RDN}}" # Find domain in RDN with Misconfiguration
+        - "https://{{tolower(rand_base(5))}}.{{RDN}}"
     stop-at-first-match: true
     matchers:
       - type: dsl
